@@ -14,11 +14,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
-app.get("/teste", (req,res)=>{
-  res.sendStatus(200)
-})
-
 app.post("/sign-up", async (req, res) => {
     const { name, email, password,secPassword } = req.body;
     const schema=Joi.object({
